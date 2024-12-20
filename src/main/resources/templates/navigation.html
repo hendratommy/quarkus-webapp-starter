@@ -1,0 +1,67 @@
+{#fragment id=topNav}
+<nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
+  <div
+    class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"
+  >
+    <a href="#" class="flex items-center">
+      <img src="/static/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Logo" />
+      <span
+        class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+        >Lorem Ipsum</span
+      >
+    </a>
+    <div class="flex items-center lg:hidden">
+      <sl-drawer id="drawer" placement="end">
+        <div class="items-center justify-between w-full">
+          <ul class="flex flex-col mt-4 font-medium">
+            <li>
+              <a href="#" class="menu-item active" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#" class="menu-item">Products</a>
+            </li>
+            <li>
+              <a href="#" class="menu-item">Company</a>
+            </li>
+            <li>
+              <a href="#" class="menu-item">Team</a>
+            </li>
+            <li>
+              <a href="#" class="menu-item">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </sl-drawer>
+      <sl-icon-button
+        id="drawer-open-btn"
+        name="list"
+        label="Menu"
+        class="text-xl"
+      ></sl-icon-button>
+    </div>
+    <div
+      class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
+    >
+      <ul
+        class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
+      >
+        <li>
+          <a href="#" class="menu-item active" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#" class="menu-item">Products</a>
+        </li>
+        <li>
+          <a href="#" class="menu-item">Company</a>
+        </li>
+        <li>
+          <a href="#" class="menu-item">Team</a>
+        </li>
+        <li>
+          <a href="#" class="menu-item">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{/fragment}
