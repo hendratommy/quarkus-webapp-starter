@@ -424,7 +424,7 @@
         alt="dashboard feature image"
       />
     </div>
-    <!-- Row -->
+    
     <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
       <img
         class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex"
@@ -442,13 +442,11 @@
           traditional ITSM solutions. Accelerate critical development work,
           eliminate toil, and deploy changes with ease.
         </p>
-        <!-- List -->
         <ul
           role="list"
           class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700"
         >
           <li class="flex space-x-3">
-            <!-- Icon -->
             <svg
               class="flex-shrink-0 w-5 h-5 text-sky-500 dark:text-sky-400"
               fill="currentColor"
@@ -467,7 +465,6 @@
             >
           </li>
           <li class="flex space-x-3">
-            <!-- Icon -->
             <svg
               class="flex-shrink-0 w-5 h-5 text-sky-500 dark:text-sky-400"
               fill="currentColor"
@@ -486,7 +483,6 @@
             >
           </li>
           <li class="flex space-x-3">
-            <!-- Icon -->
             <svg
               class="flex-shrink-0 w-5 h-5 text-sky-500 dark:text-sky-400"
               fill="currentColor"
@@ -505,7 +501,6 @@
             >
           </li>
           <li class="flex space-x-3">
-            <!-- Icon -->
             <svg
               class="flex-shrink-0 w-5 h-5 text-sky-500 dark:text-sky-400"
               fill="currentColor"
@@ -524,7 +519,6 @@
             >
           </li>
           <li class="flex space-x-3">
-            <!-- Icon -->
             <svg
               class="flex-shrink-0 w-5 h-5 text-sky-500 dark:text-sky-400"
               fill="currentColor"
@@ -1065,14 +1059,3 @@
     </div>
   </div>
 </section>
-
-{#scripts}
-<script>
-  const drawer = document.querySelector("#drawer");
-  const drawerOpenBtn = document.querySelector("#drawer-open-btn");
-  const drawerCloseBtn = document.querySelector('sl-button[variant="primary"]');
-
-  drawerOpenBtn.addEventListener("click", () => drawer.show());
-  drawerCloseBtn.addEventListener("click", () => drawer.hide());
-</script>
-{/scripts}
