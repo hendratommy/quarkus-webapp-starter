@@ -1,4 +1,4 @@
-package util;
+package org.acme.util;
 
 import io.quarkus.qute.TemplateExtension;
 
