@@ -1,110 +1,158 @@
-{@Integer menuIndex}
-{#include layouts/main.html menuIndex=menuIndex} {#title}Lorem Ipsum - Products{/title}
-
-<section class="bg-white dark:bg-gray-900">
-  <div
-    class="items-center max-w-screen-xl px-4 pt-20 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-6"
-  >
-    <div class="col-span-2 mb-8 text-center">
-      <img
+{@Integer menuIndex} {#include layouts/main.html menuIndex=menuIndex}
+{#title}Lorem Ipsum - Products{/title} {#fragment id=content}
+  <section class="bg-white dark:bg-gray-900">
+    <div
+      class="items-center max-w-screen-xl px-4 pt-20 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-6"
+    >
+      <div class="col-span-2 mb-8 text-center">
+        <img
           class="mb-4 w-52 m-auto"
           src="/static/images/quarkus_icon_rgb_1024px_default.svg"
         />
-      <p class="text-lg font-medium text-sky-600 dark:text-sky-500">
-        Quarkus
-      </p>
-      <h2
-        class="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white"
+        <p class="text-lg font-medium text-sky-600 dark:text-sky-500">
+          Quarkus
+        </p>
+        <h2
+          class="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white"
+        >
+          Supersonic Subatomic Java
+        </h2>
+        <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+          A Kubernetes Native Java stack tailored for OpenJDK HotSpot and
+          GraalVM, crafted from the best of breed Java libraries and standards.
+        </p>
+      </div>
+      <div
+        class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0"
       >
-        Supersonic Subatomic Java
-      </h2>
-      <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-        A Kubernetes Native Java stack tailored for OpenJDK HotSpot and GraalVM, crafted from the best of breed Java libraries and standards.
-      </p>
-    </div>
-    <div
-      class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0"
-    >
-      <div>
-        <img
-          class="mb-4"
-          src="/static/images/icon-performance.svg"
-        />
-        <h3 class="mb-2 text-2xl font-bold text-center dark:text-white">Performance</h3>
-        <p class="font-light text-gray-500 dark:text-gray-400">
-          Quarkus streamlines framework optimizations in the build phase to reduce runtime dependencies and improve efficiency.
-          By precomputing metadata and optimizing class loading, it ensures fast startup times for JVM and native binary deployments,
-          cutting down on memory usage.
-        </p>
-      </div>
-      
-      <div>
-        <img
-          class="mb-4"
-          src="/static/images/icon-kube-native.svg"
-        />
-        <h3 class="mb-2 text-2xl font-bold text-center dark:text-white">Kube-Native</h3>
-        <p class="font-light text-gray-500 dark:text-gray-400">
-          The combination of Quarkus and Kubernetes provides an ideal environment for creating scalable, fast, and lightweight applications.
-          Quarkus significantly increases developer productivity with tooling, pre-built integrations, application services, and more.
-        </p>
-      </div>
+        <div>
+          <img class="mb-4" src="/static/images/icon-performance.svg" />
+          <h3 class="mb-2 text-2xl font-bold text-center dark:text-white">
+            Performance
+          </h3>
+          <p class="font-light text-gray-500 dark:text-gray-400">
+            Quarkus streamlines framework optimizations in the build phase to
+            reduce runtime dependencies and improve efficiency. By precomputing
+            metadata and optimizing class loading, it ensures fast startup times
+            for JVM and native binary deployments, cutting down on memory usage.
+          </p>
+        </div>
 
-      <div>
-        <img
-          class="mb-4"
-          src="/static/images/icon-versatility.svg"
-        />
-        <h3 class="mb-2 text-2xl font-bold text-center dark:text-white">Reactive Core</h3>
-        <p class="font-light text-gray-500 dark:text-gray-400">
-          Built on a robust reactive core, Quarkus ensures fast and efficient performance, supporting the development of a wide variety of modern applications.
-        </p>
-      </div>
-      
-      <div>
-        <img
-          class="mb-4"
-          src="/static/images/icon-containerfirst.svg"
-        />
-        <h3 class="mb-2 text-2xl font-bold text-center dark:text-white">Container First</h3>
-        <p class="font-light text-gray-500 dark:text-gray-400">
-          Quarkus tailors your application for GraalVM and HotSpot. Amazingly fast boot time, incredibly low RSS memory (not just heap size!) offering
-          near instant scale up and high density memory utilization in container orchestration platforms like Kubernetes. 
-          We use a technique we call compile time boot.
-        </p>
+        <div>
+          <img class="mb-4" src="/static/images/icon-kube-native.svg" />
+          <h3 class="mb-2 text-2xl font-bold text-center dark:text-white">
+            Kube-Native
+          </h3>
+          <p class="font-light text-gray-500 dark:text-gray-400">
+            The combination of Quarkus and Kubernetes provides an ideal
+            environment for creating scalable, fast, and lightweight
+            applications. Quarkus significantly increases developer productivity
+            with tooling, pre-built integrations, application services, and
+            more.
+          </p>
+        </div>
+
+        <div>
+          <img class="mb-4" src="/static/images/icon-versatility.svg" />
+          <h3 class="mb-2 text-2xl font-bold text-center dark:text-white">
+            Reactive Core
+          </h3>
+          <p class="font-light text-gray-500 dark:text-gray-400">
+            Built on a robust reactive core, Quarkus ensures fast and efficient
+            performance, supporting the development of a wide variety of modern
+            applications.
+          </p>
+        </div>
+
+        <div>
+          <img class="mb-4" src="/static/images/icon-containerfirst.svg" />
+          <h3 class="mb-2 text-2xl font-bold text-center dark:text-white">
+            Container First
+          </h3>
+          <p class="font-light text-gray-500 dark:text-gray-400">
+            Quarkus tailors your application for GraalVM and HotSpot. Amazingly
+            fast boot time, incredibly low RSS memory (not just heap size!)
+            offering near instant scale up and high density memory utilization
+            in container orchestration platforms like Kubernetes. We use a
+            technique we call compile time boot.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="bg-gray-50 dark:bg-gray-800">
-  <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-24 lg:px-6">
-    <figure class="max-w-screen-md mx-auto">
-      <img
-          class="mb-4 w-52 m-auto"
-          src="/static/images/shoelace-logo.svg"
-        />
-      <h2
-        class="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white"
-      >
-        A forward-thinking library of web components.
-      </h2>
-      <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+  <section class="bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-24 lg:px-6">
+      <figure class="max-w-screen-md mx-auto">
+        <img class="mb-4 w-52 m-auto" src="/static/images/shoelace-logo.svg" />
+        <h2
+          class="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white"
+        >
+          A forward-thinking library of web components.
+        </h2>
+
         <ul class="flex align-center justify-center items-center flex-col">
-          <li>Works with CDNs 🚛</li>
-          <li>Works with all frameworks 🧩</li>
-          <li>Fully customizable with CSS 🎨</li>
-          <li>Includes a dark theme 🌛</li>
-          <li>Built with accessibility in mind ♿️</li>
-          <li>First-class <a href="/frameworks/react">React support</a> ⚛️</li>
-          <li>Built-in localization 💬</li>
-          <li>Open source 😸</li>
+          <li>
+            <p
+              class="font-light text-gray-500 sm:text-xl dark:text-gray-400"
+            ></p>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              >Works with CDNs 🚛
+            </p>
+          </li>
+          <li>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              Works with all frameworks 🧩
+            </p>
+          </li>
+          <li>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              Fully customizable with CSS 🎨
+            </p>
+          </li>
+          <li>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              Includes a dark theme 🌛
+            </p>
+          </li>
+          <li>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              Built with accessibility in mind ♿️
+            </p>
+          </li>
+          <li>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              First-class <a href="/frameworks/react">React support</a> ⚛️
+            </p>
+          </li>
+          <li>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              Built-in localization 💬
+            </p>
+          </li>
+          <li>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              Open source 😸
+            </p>
+          </li>
           <li class="flex items-center flex-row">
-            <a href="https://blog.fontawesome.com/shoelace-joins-font-awesome/" class="inline-flex items-center text-base text-sky-600 hover:text-sky-800 dark:text-sky-500 dark:hover:text-sky-700 underline decoration-sky-600 hover:decoration-sky-800" rel="noopener noreferrer" target="_blank">More awesome than ever</a>&nbsp;
-            <img class="w-4 h-4 " src="/static/images/awesome.svg" alt="Awesome emoji">
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              <a
+                href="https://blog.fontawesome.com/shoelace-joins-font-awesome/"
+                class="inline-flex items-center text-base text-sky-600 hover:text-sky-800 dark:text-sky-500 dark:hover:text-sky-700 underline decoration-sky-600 hover:decoration-sky-800"
+                rel="noopener noreferrer"
+                target="_blank"
+                >More awesome than ever</a
+              >&nbsp;
+              <img
+                class="w-4 h-4"
+                src="/static/images/awesome.svg"
+                alt="Awesome emoji"
+              />
+            </p>
           </li>
         </ul>
-      </p>
-    </figure>
-  </div>
-</section>
+      </figure>
+    </div>
+  </section>
+{/fragment}
