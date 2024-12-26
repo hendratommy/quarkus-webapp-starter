@@ -1,3 +1,4 @@
+{@Integer menuIndex}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +18,7 @@
     key="main"/} {#insert scripts /}
   </head>
   <body>
-    <header class="fixed w-full">{#include navigation$topNav /}</header>
+    <header class="fixed w-full">{#include navigation$topNav index=menuIndex /}</header>
 
     {#insert /}
 

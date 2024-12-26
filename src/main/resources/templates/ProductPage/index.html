@@ -1,4 +1,5 @@
-{#include layouts/main.html} {#title}Lorem Ipsum - Products{/title}
+{@Integer menuIndex}
+{#include layouts/main.html menuIndex=menuIndex} {#title}Lorem Ipsum - Products{/title}
 
 <section class="bg-white dark:bg-gray-900">
   <div
@@ -81,16 +82,29 @@
     <figure class="max-w-screen-md mx-auto">
       <img
           class="mb-4 w-52 m-auto"
-          src="/static/images/quarkiverse-logo.png"
+          src="/static/images/shoelace-logo.svg"
         />
-      <p class="text-lg font-medium text-sky-600 dark:text-sky-500">
-        Quarkus Renarde Web Framework
-      </p>
       <h2
         class="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white"
       >
-        Server-side Web Framework based on Quarkus, Qute, Hibernate and Quarkus REST
+        A forward-thinking library of web components.
       </h2>
+      <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+        <ul class="flex align-center justify-center items-center flex-col">
+          <li>Works with CDNs 🚛</li>
+          <li>Works with all frameworks 🧩</li>
+          <li>Fully customizable with CSS 🎨</li>
+          <li>Includes a dark theme 🌛</li>
+          <li>Built with accessibility in mind ♿️</li>
+          <li>First-class <a href="/frameworks/react">React support</a> ⚛️</li>
+          <li>Built-in localization 💬</li>
+          <li>Open source 😸</li>
+          <li class="flex items-center flex-row">
+            <a href="https://blog.fontawesome.com/shoelace-joins-font-awesome/" class="inline-flex items-center text-base text-sky-600 hover:text-sky-800 dark:text-sky-500 dark:hover:text-sky-700 underline decoration-sky-600 hover:decoration-sky-800" rel="noopener noreferrer" target="_blank">More awesome than ever</a>&nbsp;
+            <img class="w-4 h-4 " src="/static/images/awesome.svg" alt="Awesome emoji">
+          </li>
+        </ul>
+      </p>
     </figure>
   </div>
 </section>

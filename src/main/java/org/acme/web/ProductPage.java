@@ -9,13 +9,13 @@ import jakarta.ws.rs.Path;
 public class ProductPage {
     @CheckedTemplate
     public static class Views {
-        public static native TemplateInstance index();
+        public static native TemplateInstance index(int menuIndex);
     }
 
     @GET
     @Path("/")
     public TemplateInstance index() {
-        return Views.index();
+        return Views.index(1);
     }
 
 }

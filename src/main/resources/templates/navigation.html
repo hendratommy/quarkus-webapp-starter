@@ -1,4 +1,23 @@
+{#fragment id=menuItems rendered=false}
+<li>
+  <a href="/" class="menu-item {#if index == 0}active{/if}" aria-current="page">Home</a>
+</li>
+<li>
+  <a href="/products" class="menu-item {#if index == 1}active{/if}">Products</a>
+</li>
+<li>
+  <a href="#" class="menu-item {#if index == 2}active{/if}">Company</a>
+</li>
+<li>
+  <a href="#" class="menu-item {#if index == 3}active{/if}">Team</a>
+</li>
+<li>
+  <a href="#" class="menu-item {#if index == 4}active{/if}">Contact</a>
+</li>
+{/fragment}
+
 {#fragment id=topNav}
+{@Integer index}
 <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
   <div
     class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"
@@ -14,21 +33,7 @@
       <sl-drawer id="drawer" placement="end">
         <div class="items-center justify-between w-full">
           <ul class="flex flex-col mt-4 font-medium">
-            <li>
-              <a href="/" class="menu-item active" aria-current="page">Home</a>
-            </li>
-            <li>
-              <a href="/products" class="menu-item">Products</a>
-            </li>
-            <li>
-              <a href="#" class="menu-item">Company</a>
-            </li>
-            <li>
-              <a href="#" class="menu-item">Team</a>
-            </li>
-            <li>
-              <a href="#" class="menu-item">Contact</a>
-            </li>
+            {#include $menuItems /}
           </ul>
         </div>
       </sl-drawer>
@@ -45,21 +50,7 @@
       <ul
         class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
       >
-        <li>
-          <a href="/" class="menu-item active" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="/products" class="menu-item">Products</a>
-        </li>
-        <li>
-          <a href="#" class="menu-item">Company</a>
-        </li>
-        <li>
-          <a href="#" class="menu-item">Team</a>
-        </li>
-        <li>
-          <a href="#" class="menu-item">Contact</a>
-        </li>
+        {#include $menuItems /}
       </ul>
     </div>
   </div>
