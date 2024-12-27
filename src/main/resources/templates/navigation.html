@@ -29,7 +29,10 @@
 <li>
   <a href="#" class="menu-item {#if index == 4}active{/if}">Contact</a>
 </li>
-{/fragment} {#fragment id=topNav} {@Integer index}
+{/fragment}
+
+{#fragment id=topNav}
+{@Integer index}
 <nav
   id="topNav"
   class="bg-white border-gray-200 py-2.5 dark:bg-gray-900"
@@ -71,7 +74,9 @@
     </div>
   </div>
 </nav>
-{/fragment} {#fragment id=topNavScript}
+{/fragment}
+
+{#fragment id=topNavScript}
 <script type="module">
   function initDrawer() {
     const drawer = document.querySelector("#drawer");
