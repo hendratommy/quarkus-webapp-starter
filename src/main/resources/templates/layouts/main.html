@@ -14,8 +14,20 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-    {#bundle tag="style" key="main"/} {#insert styles /} {#bundle tag="script"
-    key="main"/} {#insert scripts /}
+    <style>
+      body {
+        opacity: 0;
+      }
+
+      body.ready {
+        opacity: 1;
+        transition: 0.25s opacity;
+      }
+    </style>
+    {#bundle tag="style" key="main"/}
+    {#insert styles /}
+    {#bundle tag="script" key="main"/}
+    {#insert scripts /}
   </head>
   <body>
     <header class="fixed w-full">{#include navigation$topNav index=menuIndex /}</header>
@@ -227,6 +239,24 @@
       </div>
     </footer>
 
+    <script type="module">
+      async function fouce() {
+        const container = document.querySelector("body");
+        const undefinedElements = container.querySelectorAll(":not(:defined)");
+        await Promise.race(
+          [
+            Promise.allSettled(
+              Array.from(undefinedElements).map((element) =>
+                customElements.whenDefined(element.localName)
+              )
+            ),
+          ],
+          new Promise((resolve) => setTimeout(resolve, 2000))
+        );
+        document.body.classList.add("ready");
+      }
+      fouce();
+    </script>
     {#include navigation$topNavScript /}
   </body>
 </html>

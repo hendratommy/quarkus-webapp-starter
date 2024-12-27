@@ -1,6 +1,8 @@
 {#fragment id=menuItems rendered=false}
 <li>
-  <a href="/" class="menu-item {#if index == 0}active{/if}" aria-current="page">Home</a>
+  <a href="/" class="menu-item {#if index == 0}active{/if}" aria-current="page"
+    >Home</a
+  >
 </li>
 <li>
   <a href="/products" class="menu-item {#if index == 1}active{/if}">Products</a>
@@ -58,12 +60,20 @@
 {/fragment}
 
 {#fragment id=topNavScript}
-<script>
-  const drawer = document.querySelector("#drawer");
-  const drawerOpenBtn = document.querySelector("#drawer-open-btn");
-  const drawerCloseBtn = document.querySelector('sl-button[variant="primary"]');
+<script type="module">
+  function initDrawer() {
+    const drawer = document.querySelector("#drawer");
+    const drawerOpenBtn = document.querySelector("#drawer-open-btn");
+    const drawerCloseBtn = document.querySelector(
+      'sl-button[variant="primary"]'
+    );
 
-  drawerOpenBtn.addEventListener("click", () => drawer.show());
-  drawerCloseBtn.addEventListener("click", () => drawer.hide());
+    drawerOpenBtn.addEventListener("click", () => drawer.show());
+    if (drawerCloseBtn) {
+      drawerCloseBtn.addEventListener("click", () => drawer.hide());
+    }
+  }
+
+  initDrawer();
 </script>
 {/fragment}
