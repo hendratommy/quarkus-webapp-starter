@@ -67,6 +67,12 @@
         </dependency>
         -->
         <dependency>
+            <groupId>org.mvnpm</groupId>
+            <artifactId>htmx.org</artifactId>
+            <version>1.9.12</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.mvnpm.at.shoelace-style</groupId>
             <artifactId>shoelace</artifactId>
             <version>2.20.0</version>
