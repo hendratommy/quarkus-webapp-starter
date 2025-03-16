@@ -4,7 +4,6 @@
     <groupId>org.acme</groupId>
     <artifactId>quarkus-webapp-starter</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-
     <properties>
         <compiler-plugin.version>3.13.0</compiler-plugin.version>
         <maven.compiler.release>21</maven.compiler.release>
@@ -18,7 +17,6 @@
         <renarde.version>3.0.19</renarde.version>
         <web-bundler.version>1.8.0</web-bundler.version>
     </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -41,15 +39,45 @@
             <artifactId>quarkus-web-bundler</artifactId>
             <version>${web-bundler.version}</version>
         </dependency>
-        
         <!-- dummy npm dependencies -->
+        <dependency>
+            <groupId>org.mvnpm</groupId>
+            <artifactId>tailwindcss</artifactId>
+            <version>4.0.9</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mvnpm.at.tailwindcss</groupId>
+            <artifactId>postcss</artifactId>
+            <version>4.0.9</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mvnpm</groupId>
+            <artifactId>postcss</artifactId>
+            <version>8.5.3</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>org.mvnpm.at.tailwindcss</groupId>
+            <artifactId>typography</artifactId>
+            <version>0.5.16</version>
+            <scope>runtime</scope>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.mvnpm.at.shoelace-style</groupId>
+            <artifactId>shoelace</artifactId>
+            <version>2.20.0</version>
+            <scope>runtime</scope>
+        </dependency>
         <dependency>
             <groupId>org.mvnpm</groupId>
             <artifactId>typescript</artifactId>
             <version>5.7.2</version>
             <scope>runtime</scope>
         </dependency>
-        
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-arc</artifactId>
@@ -139,10 +167,11 @@
             <dependencyManagement>
                 <dependencies>
                     <dependency>
-                        <groupId>org.mvnpm</groupId>
-                        <artifactId>typescript</artifactId>
-                        <version>5.7.2</version>
-                        <scope>runtime</scope>
+                        <groupId>org.acme</groupId>
+                        <artifactId>quarkus-webapp-starter-locker</artifactId>
+                        <version>${project.version}</version>
+                        <type>pom</type>
+                        <scope>import</scope>
                     </dependency>
                 </dependencies>
             </dependencyManagement>

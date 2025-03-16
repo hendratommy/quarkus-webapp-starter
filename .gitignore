@@ -45,14 +45,14 @@ nb-configuration.xml
 .certs/
 
 # Web Bundler
-node_modules/
+node_modules
 
 # Logs
-logs
+/logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
 # tailwindcss output
-src/main/resources/web/main/main.css
+/src/main/resources/web/main/main.css
