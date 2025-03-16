@@ -11,11 +11,17 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.17.4</quarkus.platform.version>
+        <quarkus.platform.version>3.19.3</quarkus.platform.version>
         <skipITs>true</skipITs>
-        <surefire-plugin.version>3.5.0</surefire-plugin.version>
-        <renarde.version>3.0.19</renarde.version>
-        <web-bundler.version>1.8.0</web-bundler.version>
+        <surefire-plugin.version>3.5.2</surefire-plugin.version>
+        <renarde.version>3.0.20</renarde.version>
+        <web-bundler.version>1.8.1</web-bundler.version>
+        <mvnpm.typescript.version>5.7.2</mvnpm.typescript.version>
+        <mvnpm.eslint.version>9.22.0</mvnpm.eslint.version>
+        <mvnpm.typescript-eslint.version>8.26.1</mvnpm.typescript-eslint.version>
+        <mvnpm.tailwindcss.version>4.0.9</mvnpm.tailwindcss.version>
+        <mvnpm.postcss.version>8.5.3</mvnpm.postcss.version>
+        <mvnpm.tailwindcss-typography.version>0.5.16</mvnpm.tailwindcss-typography.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -30,6 +36,11 @@
     </dependencyManagement>
     <dependencies>
         <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-arc</artifactId>
+        </dependency>
+        <!-- START MVC -->
+        <dependency>
             <groupId>io.quarkiverse.renarde</groupId>
             <artifactId>quarkus-renarde</artifactId>
             <version>${renarde.version}</version>
@@ -39,31 +50,31 @@
             <artifactId>quarkus-web-bundler</artifactId>
             <version>${web-bundler.version}</version>
         </dependency>
-        <!-- dummy npm dependencies -->
+        <!-- START NPM dependencies -->
         <dependency>
             <groupId>org.mvnpm</groupId>
             <artifactId>tailwindcss</artifactId>
-            <version>4.0.9</version>
+            <version>${mvnpm.tailwindcss.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.mvnpm.at.tailwindcss</groupId>
             <artifactId>postcss</artifactId>
-            <version>4.0.9</version>
+            <version>${mvnpm.tailwindcss.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.mvnpm</groupId>
             <artifactId>postcss</artifactId>
-            <version>8.5.3</version>
+            <version>${mvnpm.postcss.version}</version>
             <scope>runtime</scope>
         </dependency>
         <!--
         <dependency>
             <groupId>org.mvnpm.at.tailwindcss</groupId>
             <artifactId>typography</artifactId>
-            <version>0.5.16</version>
-            <scope>runtime</scope>
+            <version>${mvnpm.tailwindcss-typography.version}</version>
+            <scope>provided</scope>
         </dependency>
         -->
         <dependency>
@@ -78,16 +89,36 @@
             <version>2.20.0</version>
             <scope>runtime</scope>
         </dependency>
-        <dependency>
-            <groupId>org.mvnpm</groupId>
-            <artifactId>typescript</artifactId>
-            <version>5.7.2</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-arc</artifactId>
-        </dependency>
+        <!-- dev -->
+        <!-- not available
+       <dependency>
+           <groupId>org.mvnpm</groupId>
+           <artifactId>typescript</artifactId>
+           <version>5.7.2</version>
+           <scope>runtime</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.mvnpm</groupId>
+           <artifactId>eslint</artifactId>
+           <version>${mvnpm.eslint.version}</version>
+           <scope>provided</scope>
+       </dependency>
+       <dependency>
+           <groupId>org.mvnpm.at.typescript-eslint</groupId>
+           <artifactId>eslint-plugin</artifactId>
+           <version>${mvnpm.typescript-eslint.version}</version>
+           <scope>provided</scope>
+       </dependency>
+       <dependency>
+           <groupId>org.mvnpm.at.typescript-eslint</groupId>
+           <artifactId>parser</artifactId>
+           <version>${mvnpm.typescript-eslint.version}</version>
+           <scope>provided</scope>
+       </dependency>
+       -->
+        <!-- END NPM dependencies -->
+        <!-- END MVC -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-junit5</artifactId>
