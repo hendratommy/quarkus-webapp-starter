@@ -141,8 +141,8 @@
       </dependency>
       <dependency>
         <groupId>org.mvnpm</groupId>
-        <artifactId>htmx</artifactId>
-        <version>0.0.2</version>
+        <artifactId>htmx.org</artifactId>
+        <version>1.9.12</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
