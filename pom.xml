@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.acme</groupId>
     <artifactId>quarkus-webapp-starter</artifactId>
@@ -19,6 +21,7 @@
         <mvnpm.typescript.version>5.7.2</mvnpm.typescript.version>
         <mvnpm.eslint.version>9.22.0</mvnpm.eslint.version>
         <mvnpm.typescript-eslint.version>8.26.1</mvnpm.typescript-eslint.version>
+        <mvnpm.tailwindcss-cli.version>4.0.14</mvnpm.tailwindcss-cli.version>
         <mvnpm.tailwindcss.version>4.0.9</mvnpm.tailwindcss.version>
         <mvnpm.postcss.version>8.5.3</mvnpm.postcss.version>
         <mvnpm.tailwindcss-typography.version>0.5.16</mvnpm.tailwindcss-typography.version>
@@ -167,7 +170,8 @@
                 </executions>
                 <configuration>
                     <systemPropertyVariables>
-                        <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
+                        <native.image.path>
+                            ${project.build.directory}/${project.build.finalName}-runner</native.image.path>
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         <maven.home>${maven.home}</maven.home>
                     </systemPropertyVariables>

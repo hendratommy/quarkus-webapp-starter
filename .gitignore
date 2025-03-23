@@ -54,5 +54,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# tailwindcss output
-/src/main/resources/web/main/main.css
