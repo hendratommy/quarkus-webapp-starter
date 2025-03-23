@@ -3,18 +3,20 @@
 @import '@shoelace-style/shoelace/dist/themes/light.css';
 
 @layer base {
-  :root {
-    --sl-color-primary-50: var(--color-teal-50);
-    --sl-color-primary-100: var(--color-teal-100);
-    --sl-color-primary-200: var(--color-teal-200);
-    --sl-color-primary-300: var(--color-teal-300);
-    --sl-color-primary-400: var(--color-teal-400);
-    --sl-color-primary-500: var(--color-teal-500);
-    --sl-color-primary-600: var(--color-teal-600);
-    --sl-color-primary-700: var(--color-teal-700);
-    --sl-color-primary-800: var(--color-teal-800);
-    --sl-color-primary-900: var(--color-teal-900);
-    --sl-color-primary-950: var(--color-teal-950);
+  :root,
+  :host,
+  .sl-theme-light {
+    --sl-color-primary-50: var(--color-sky-50);
+    --sl-color-primary-100: var(--color-sky-100);
+    --sl-color-primary-200: var(--color-sky-200);
+    --sl-color-primary-300: var(--color-sky-300);
+    --sl-color-primary-400: var(--color-sky-400);
+    --sl-color-primary-500: var(--color-sky-500);
+    --sl-color-primary-600: var(--color-sky-600);
+    --sl-color-primary-700: var(--color-sky-700);
+    --sl-color-primary-800: var(--color-sky-800);
+    --sl-color-primary-900: var(--color-sky-900);
+    --sl-color-primary-950: var(--color-sky-950);
   }
 
   a:hover {
