@@ -13,11 +13,8 @@ It is now possible to use `mvnpm` entirely since `tailwindcss version 4`.
 
 ## Getting Started
 
-~~1. Run `./mvnw quarkus:dev` then stop (`Ctrl + C`), some errors maybe produced~~
-~~2. Run `npm install`~~
-~~3. Run `npm run dev`~~
-~~4. Run `./mvnw quarkus:dev` this should be started without any errors~~
-~~5. Open `http://localhost:8080` using web browser~~
-
-1. Run `./mvnw quarkus:dev` this should be started without any errors
-2. Open `http://localhost:8080` using web browser
+1. Install `@tailwindcss/cli` globally, `npm install -g @tailwindcss/cli`
+2. Run `./mvnw quarkus:dev` then stop (`Ctrl + C`), some errors maybe produced
+3. Run `tailwindcss`, `npx @tailwindcss/cli -i ./src/main/css/main.css -o ./src/main/resources/web/main/main.css --watch`
+4. Run `./mvnw quarkus:dev` this should be started without any errors
+5. Open `http://localhost:8080` using web browser
