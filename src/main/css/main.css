@@ -2,22 +2,24 @@
 
 @import '@shoelace-style/shoelace/dist/themes/light.css';
 
+:root,
+:host,
+.sl-theme-light {
+  --sl-color-primary-50: var(--color-sky-50);
+  --sl-color-primary-100: var(--color-sky-100);
+  --sl-color-primary-200: var(--color-sky-200);
+  --sl-color-primary-300: var(--color-sky-300);
+  --sl-color-primary-400: var(--color-sky-400);
+  --sl-color-primary-500: var(--color-sky-500);
+  --sl-color-primary-600: var(--color-sky-600);
+  --sl-color-primary-700: var(--color-sky-700);
+  --sl-color-primary-800: var(--color-sky-800);
+  --sl-color-primary-900: var(--color-sky-900);
+  --sl-color-primary-950: var(--color-sky-950);
+}
+
 @layer base {
-  :root,
-  :host,
-  .sl-theme-light {
-    --sl-color-primary-50: var(--color-sky-50);
-    --sl-color-primary-100: var(--color-sky-100);
-    --sl-color-primary-200: var(--color-sky-200);
-    --sl-color-primary-300: var(--color-sky-300);
-    --sl-color-primary-400: var(--color-sky-400);
-    --sl-color-primary-500: var(--color-sky-500);
-    --sl-color-primary-600: var(--color-sky-600);
-    --sl-color-primary-700: var(--color-sky-700);
-    --sl-color-primary-800: var(--color-sky-800);
-    --sl-color-primary-900: var(--color-sky-900);
-    --sl-color-primary-950: var(--color-sky-950);
-  }
+  
 
   a:hover {
     cursor: pointer;
