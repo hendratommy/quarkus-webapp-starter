@@ -19,8 +19,6 @@
 }
 
 @layer base {
-  
-
   a:hover {
     cursor: pointer;
   }
